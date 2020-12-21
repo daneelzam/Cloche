@@ -1,0 +1,55 @@
+<section class="main">
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <section>
+                {{#each weekArr}}
+                <article>
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse{{this.key}}" aria-expanded="false"
+                                aria-controls="collapse{{this.key}}">
+                                {{this.key}}
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse{{this.key}}" class="collapse" aria-labelledby="headingTwo"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div>
+                                <h2 class="h2">breakfast</h2>
+                                <div>Name: {{this.plan.breakfast.nameOfDish}}</div>
+                                <div>Link: {{this.plan.breakfast.linkToRecipe}}</div>
+                                <div>Recipe: {{this.plan.breakfast.recipe}}</div>
+                                <div>Ingredients: {{this.plan.breakfast.ingredients}}</div>
+                            </div>
+                            <div>
+                                <h2>lunch</h2>
+                                <div>Name: {{this.plan.lunch.nameOfDish}}</div>
+                                <div>Link: {{this.plan.lunch.linkToRecipe}}</div>
+                                <div>Recipe: {{this.plan.lunch.recipe}}</div>
+                                <div>{{this.plan.lunch.ingredients}}</div>
+                            </div>
+                            <div>
+                                <h2>dinner</h2>
+                                <div>Name: {{this.plan.dinner.nameOfDish}}</div>
+                                <div>Link: {{this.plan.dinner.linkToRecipe}}</div>
+                                <div>Recipe: {{this.plan.dinner.recipe}}</div>
+                                <div>Ingredients: {{this.plan.dinner.ingredients}}</div>
+                            </div>
+                            <div>
+                                <h2>snack</h2>
+                                <div>Name: {{this.plan.snack.nameOfDish}}</div>
+                                <div>Link: {{this.plan.snack.linkToRecipe}}</div>
+                                <div>Recipe: {{this.plan.snack.recipe}}</div>
+                                <div>Ingredients: {{this.plan.snack.ingredients}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                {{/each}}
+            </section>
+        </div>
+    </div>
+</section>

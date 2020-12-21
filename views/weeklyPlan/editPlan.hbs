@@ -1,0 +1,15 @@
+<form action="/weeklyPlan/{{weeklyPlan._id}}" method="POST", data-method="PUT" name="editPartyForm">
+    {{#if weeklyPlan}}
+    <div>
+        <label for="start">Start Date is: {{weeklyPlan.start}}</label> <br>
+        <input type="datetime-local" name="start">
+        <span style="color: red;"></span>
+    </div>
+    <div>
+        <label for="end">End Date is: {{weeklyPlan.end}}</label> <br>
+        <input type="datetime-local" name="end">
+        <span style="color: red;"></span>
+    </div>
+    <input type="submit" value="Edit a weekly Plan">
+    {{/if}}
+</form>

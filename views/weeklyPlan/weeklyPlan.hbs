@@ -1,0 +1,40 @@
+<section class="main">
+    <section>
+        <h1>{{weeklyPlan.partyName}}</h1>
+        <div>Start date: {{weeklyPlan.start}}</div>
+        <div>End date: {{weeklyPlan.end}}</div>
+        <div>Host: {{weeklyPlan.host.username}}</div>
+        {{#if admin}}
+        <a href="/weeklyPlan/edit/{{weeklyPlan._id}}">Edit</a>
+        <a href="/weeklyPlan/{{weeklyPlan._id}}?_action=delete">Delete</a>
+        {{/if}}
+    </section>
+    <form action="/recipe/{{weeklyPlan._id}}" method="post" name="plan">
+        <div class="accordion" id="accordionExample"></div>
+        <section>
+            {{#each week}}
+            <article class="{{this.day}}">
+                <div class="card card-body">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse{{this.day}}" aria-expanded="false"
+                                aria-controls="collapse{{this.day}}">
+                                {{this.day}}
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse" id="collapse{{this.day}}" aria-labelledby="headingTwo"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {{> dietForm}}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {{/each}}
+        </section>
+        </div>
+        <input type="submit" value="Create a plane">
+    </form>
+</section>

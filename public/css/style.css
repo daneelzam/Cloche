@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login {
+    position: relative;
+}
+
+.logoRightSide{
+    background-color: #90BDAA;
+    padding-left: 5%;
+    width: 60%;
+    height: 100vh;
+}
+
+.logoLeftSide{
+    width: 40%;
+    height: 100vh;
+}
+
+.bgcontainer {
+    height: 30%;
+    width: 70%;
+    background-image: url('../img/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    font-size: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-link{
+    color: #90BDAA;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: #90BDAA;
+}
+
+h1{
+    color: #90BDAA;
+}
+
+a {
+    color: #90BDAA;
+}
+
+.main {
+    padding-top: 5%;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.btn-link {
+    color: #90BDAA;
+}
+
+h2 {
+    background-color: #90BDAA;
+    color: white;
+    text-align: end;
+    padding-right: 100px;
+}
+
+.fonHiden{
+    color: white;
+}

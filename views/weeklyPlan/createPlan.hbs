@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-items-center login" style="height: 100vh;">
+    <div class="logoSide logoLeftSide d-flex justify-content-end align-items-center">
+        <div class="bgcontainer"></div>
+    </div>
+    <div
+        class="logoSide logoRightSide d-flex justify-content-start align-items-center">
+        <form action="weeklyPlan" method="post" name="planForm" class="d-flex flex-column align-items-end">
+            <div>
+                <label for="start">Start Date</label> <br>
+                <input type="datetime-local" name="start">
+                <span style="color: red;"></span>
+            </div>
+            <div>
+                <label for="end">End Date</label> <br>
+                <input type="datetime-local" name="end">
+                <span style="color: red;"></span>
+            </div>
+            <input type="submit" value="Create a plan">
+        </form>
+    </div>
+</div>

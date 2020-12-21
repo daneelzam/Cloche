@@ -1,0 +1,65 @@
+<section class="main">
+    {{#each weeklyPlans}}
+    <article>
+        <a href="{{protocol}}{{urlHost}}recipe/{{this._id}}">
+            <h1>From {{this.startDate}} to {{this.endDate}}</h1>
+        </a>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th></th>
+                    <th scope="col">Mo</th>
+                    <th scope="col">Tu</th>
+                    <th scope="col">We</th>
+                    <th scope="col">Th</th>
+                    <th scope="col">Fr</th>
+                    <th scope="col">Sa</th>
+                    <th scope="col">Su</th>
+                </tr>
+
+            </thead>
+            <tr>
+                <th scope='row'>breakfast</th>
+                <td>{{this.mo.breakfast.nameOfDish}}</td>
+                <td>{{this.tu.breakfast.nameOfDish}}</td>
+                <td>{{this.we.breakfast.nameOfDish}}</td>
+                <td>{{this.th.breakfast.nameOfDish}}</td>
+                <td>{{this.fr.breakfast.nameOfDish}}</td>
+                <td>{{this.sa.breakfast.nameOfDish}}</td>
+                <td>{{this.su.breakfast.nameOfDish}}</td>
+            </tr>
+            <tr>
+                <th scope='row'>lunch</th>
+                <td>{{this.mo.lunch.nameOfDish}}</td>
+                <td>{{this.tu.lunch.nameOfDish}}</td>
+                <td>{{this.we.lunch.nameOfDish}}</td>
+                <td>{{this.th.lunch.nameOfDish}}</td>
+                <td>{{this.fr.lunch.nameOfDish}}</td>
+                <td>{{this.sa.lunch.nameOfDish}}</td>
+                <td>{{this.su.lunch.nameOfDish}}</td>
+            </tr>
+            <tr>
+                <th scope='row'>dinner</th>
+                <td>{{this.mo.dinner.nameOfDish}}</td>
+                <td>{{this.tu.dinner.nameOfDish}}</td>
+                <td>{{this.we.dinner.nameOfDish}}</td>
+                <td>{{this.th.dinner.nameOfDish}}</td>
+                <td>{{this.fr.dinner.nameOfDish}}</td>
+                <td>{{this.sa.dinner.nameOfDish}}</td>
+                <td>{{this.su.dinner.nameOfDish}}</td>
+            </tr>
+            <tr>
+                <th scope='row'>snack</th>
+                <td>{{this.mo.snack.nameOfDish}}</td>
+                <td>{{this.tu.snack.nameOfDish}}</td>
+                <td>{{this.we.snack.nameOfDish}}</td>
+                <td>{{this.th.snack.nameOfDish}}</td>
+                <td>{{this.fr.snack.nameOfDish}}</td>
+                <td>{{this.sa.snack.nameOfDish}}</td>
+                <td>{{this.su.snack.nameOfDish}}</td>
+            </tr>
+        </table>
+    </article>
+    <a href="/shopList/{{this._id}}">View shopping list</a>
+    {{/each}}
+</section>
